@@ -40,7 +40,7 @@ jobs:
         cp -Recurse bin\Debug\net8.0-windows10.0.19041.0\* build_output\
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: MakuTweaker-Debug
         path: build_output/
