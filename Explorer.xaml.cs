@@ -35,7 +35,7 @@ namespace MakuTweakerNew
             }
             else
             {
-                nonremovable.Visibility = Visibility.Collapsed;
+                nonremovable.Visibility = Visibility.Visible;
             }
             LoadLang(Settings.Default.lang);
             isLoaded = true;
