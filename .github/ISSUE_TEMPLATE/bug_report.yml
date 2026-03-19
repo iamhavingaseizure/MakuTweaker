@@ -1,6 +1,6 @@
 name: Bug Report
 description: Заполните форму
-title: ""
+title: "Заголовок"
 labels: ["bug"]
 
 body:
