@@ -1,6 +1,6 @@
 name: Bug Report
 description: Заполните форму
-title: "[BUG]: "
+title: ""
 labels: ["bug"]
 
 body:
@@ -17,10 +17,23 @@ body:
   - type: dropdown
     id: windows_version
     attributes:
-      label: Выберите вашу систему Windows
+      label: Выберите вашу версию Windows
       options:
         - Windows 10
-        - Windows 11
+        - Windows 11 22H2
+        - Windows 11 23H2
+        - Windows 11 24H2
+        - Windows 11 25H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os_type
+    attributes:
+      label: Какая у вас система?
+      options:
+        - Оригинальный образ от Microsoft
+        - Кастомная сборка
     validations:
       required: true
 
@@ -41,13 +54,27 @@ body:
       required: true
 
   - type: textarea
+    id: expected_vs_actual
+    attributes:
+      label: Что должно было произойти и что произошло?
+      placeholder: "Я ожидал, что контекстное меню удалится, но оно осталось на месте."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Лог файл
+      description: MakuTweaker при краше создаёт лог-файл на рабочем столе. Пожалуйста, скопируйте его содержимое сюда если он есть.
+      render: shell
+      
+  - type: textarea
     id: steps
     attributes:
       label: Можно ли повторить? Шаги воспроизведения + скриншоты
       placeholder: |
-        1. Перейти в ...
-        2. Нажать на ...
-        3. Увидеть ошибку
+        1. Перейти в...
+        2. Нажать на...
         
         Прикрепите скриншоты
     validations:
