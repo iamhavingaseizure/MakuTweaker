@@ -1,4 +1,4 @@
-name: Сообщить об ошибке
+name: Bug Report
 description: Заполните форму
 title: "[BUG]: "
 labels: ["bug"]
